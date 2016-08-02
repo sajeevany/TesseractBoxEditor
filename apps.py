@@ -4,4 +4,4 @@ from django.apps import AppConfig
 
 
 class TesseractboxeditorConfig(AppConfig):
-    name = 'tesseractboxeditor'
+    name = 'TesseractBoxEditor'

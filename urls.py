@@ -1,7 +1,10 @@
 from django.conf.urls import url, include
 from django.contrib import admin
+from . import views
 
-app_name = 'tesseractboxeditor'
+import TesseractBoxEditor
+
+app_name = 'TesseractBoxEditor'
 urlpatterns = [
-    url(r'^', 'tesseractboxeditor.views.tbe', name='tbe'),
+    url(r'^', TesseractBoxEditor.views.tbe, name='tbe'),
 ]
