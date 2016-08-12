@@ -6,14 +6,30 @@
 {% endblock %}
 
 {% block content %}
-    <div>
-        <h2>Tesseract Box Editor</h2>
-    </div>
-    <div class="container tbenav">
-        <div>
-            <label class="btn btn-default btn-file"> Browse Box File<input type="file" style="display: none;"></label>
-            <label class="btn btn-default btn-file"> Browse Image <input type="file" style="display: none;"></label>
-            <label class="btn btn-default btn-file"> Save<input type="file" style="display: none;"></label>
+
+    <div class="container">
+        <div class="tbenav">
+            <div>
+                <h2 style="padding-left: 0.5em">Tesseract Box Editor</h2>
+            </div>
+        </div>
+        <div class="tbeMenu">
+            <label class="btn btn-default btn-file">
+                <input type="file" style="display: none;">
+                <span class="glyphicon glyphicon-open-file tbeNavIcon"></span>
+                Load .box
+            </label>
+
+            <label class="btn btn-default btn-file">
+                <input type="file" style="display: none;">
+                <span class="glyphicon glyphicon-picture tbeNavIcon"></span>
+                Load Image
+            </label>
+            <label class="btn btn-default btn-file">
+                <input type="file" style="display: none;">
+                <span class="glyphicon glyphicon-floppy-save tbeNavIcon"></span>
+                Save
+            </label>
         </div>
     </div>
 
