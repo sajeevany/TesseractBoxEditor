@@ -1,5 +1,10 @@
 .tbenav {
-    min-width: 100%; display: inline-block; background-color: grey;
-    bottom: 10px;
-    top: 100px;
+    min-width: 100%; display: inline-block;
+    height:100%;
+    background: #e2e5e0;
+}
+
+.tbeMenu{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
