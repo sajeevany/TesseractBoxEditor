@@ -1,9 +1,37 @@
 {% extends "syogesweb/header.html" %}
+{% load staticfiles %}
 
-{% block jumbotronHome %}
-
+{% block TesseractBoxEditorCSS %}
+    <link rel="stylesheet" href="{% static "TesseractBoxEditor/css/tbe.css" %}">
 {% endblock %}
 
 {% block content %}
-    <p>placeholder</p>
+
+    <div class="container">
+        <div class="tbenav">
+            <div>
+                <h2 style="padding-left: 0.5em">Tesseract Box Editor</h2>
+            </div>
+        </div>
+        <div class="tbeMenu">
+            <label class="btn btn-default btn-file">
+                <input type="file" style="display: none;">
+                <span class="glyphicon glyphicon-open-file tbeNavIcon"></span>
+                Load .box
+            </label>
+
+            <label class="btn btn-default btn-file">
+                <input type="file" style="display: none;">
+                <span class="glyphicon glyphicon-picture tbeNavIcon"></span>
+                Load Image
+            </label>
+            <label class="btn btn-default btn-file">
+                <input type="file" style="display: none;">
+                <span class="glyphicon glyphicon-floppy-save tbeNavIcon"></span>
+                Save
+            </label>
+        </div>
+    </div>
+
+
 {% endblock %}
