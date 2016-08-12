@@ -1,9 +1,19 @@
 {% extends "syogesweb/header.html" %}
+{% load staticfiles %}
 
-{% block jumbotronHome %}
-
+{% block TesseractBoxEditorCSS %}
+    <link rel="stylesheet" href="{% static "TesseractBoxEditor/css/tbe.css" %}">
 {% endblock %}
 
 {% block content %}
-    <p>placeholder</p>
+    <div>
+
+    </div>
+    <div class="container nev">
+        <label class="btn btn-default btn-file"> Browse Box File<input type="file" style="display: none;"></label>
+        <label class="btn btn-default btn-file"> Browse Image <input type="file" style="display: none;"></label>
+        <label class="btn btn-default btn-file"> Save<input type="file" style="display: none;"></label>
+    </div>
+
+
 {% endblock %}
