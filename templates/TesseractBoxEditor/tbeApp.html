@@ -7,10 +7,10 @@
 
 {% block content %}
 
-    <div class="container">
+    <div class="my-fluid-container">
         <div class="tbenav">
             <div>
-                <h2 style="padding-left: 0.5em">Tesseract Box Editor</h2>
+                <h2 style="padding-left: 0.5em;">Tesseract Box Editor</h2>
             </div>
         </div>
         <div class="tbeMenu">
@@ -25,13 +25,21 @@
                 <span class="glyphicon glyphicon-picture tbeNavIcon"></span>
                 Load Image
             </label>
-            <label class="btn btn-default btn-file">
-                <input type="file" style="display: none;">
+            <label class="btn btn-default">
                 <span class="glyphicon glyphicon-floppy-save tbeNavIcon"></span>
-                Save
+                Export Data
             </label>
         </div>
     </div>
-
+    <div class="my-fluid-container">
+        <div class="row">
+            <div class="col-sm-3 box">
+                <div class="inner-table">Dynamic Table placeholder</div>
+            </div>
+            <div class="col-sm- box">
+                <div class="inner-canvas">HTML Canvas placeholder</div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
