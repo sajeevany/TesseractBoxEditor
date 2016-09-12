@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="{% static "TesseractBoxEditor/css/tbe.css" %}">
 {% endblock %}
 
+{% block TesseractBoxEditorJS %}
+
+{% endblock %}
+
 {% block content %}
 
     <div class="my-fluid-container">
@@ -21,7 +25,7 @@
             </label>
 
             <label class="btn btn-default btn-file">
-                <input type="file" style="display: none;">
+                <input type="file" style="display: none;" id="loadImgAction">
                 <span class="glyphicon glyphicon-picture tbeNavIcon"></span>
                 Load Image
             </label>
@@ -36,8 +40,33 @@
             <div class="col-sm-3 box">
                 <div class="inner-table">Dynamic Table placeholder</div>
             </div>
-            <div class="col-sm- box">
-                <div class="inner-canvas">HTML Canvas placeholder</div>
+            <div class="col-sm-9 box">
+                <div class="inner-canvas">
+                    <canvas id="tbeCanvas"></canvas>
+                    <script type="text/javascript">
+                        //@src DerekR https://stackoverflow.com/questions/10906734/how-to-upload-image-into-html5-canvas
+                        var imageLoader = document.getElementById("loadImgAction");
+                        imageLoader.addEventListener('change', loadImage, false);
+                        var canvas = document.getElementById('tbeCanvas');
+                        var contxt = canvas.getContext('2d');
+
+                        function loadImage(e) {
+                            var fReader = new FileReader();
+                            fReader.onload = function (event) {
+                                var img = new Image();
+                                img.onload = function () {
+                                    canvas.width = img.width;
+                                    canvas.height = img.height;
+                                    contxt.drawImage(img, 0, 0);
+                                }
+
+                                img.src = event.target.result;
+                            }
+                            fReader.readAsDataURL(e.target.files[0]);
+                        }
+
+                    </script>
+                </div>
             </div>
         </div>
     </div>
